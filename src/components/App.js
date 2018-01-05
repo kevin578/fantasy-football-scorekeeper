@@ -18,7 +18,12 @@ class App extends Component {
           const index = data.players.findIndex((player) => {
             return player.name === p
           })
-          console.log(data.players[index].stats)
+          this.setState(() => {
+            return {
+              teams[0].qb.stats: data.players[index].stats
+            }
+          })
+
         })
       })
     }  

@@ -2,6 +2,10 @@ import React from 'react';
 import ReactTable from 'react-table';
 
 const Table = (props) => {
+
+    
+
+
     const columns = [
         {
             Header: 'Rank',
