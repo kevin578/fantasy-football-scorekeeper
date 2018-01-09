@@ -1,70 +1,178 @@
-const teamList = () => (
+const teamList = () => ({
+  games: [
+    2018010600, 2018010601, 2018010700, 2018010701
+  ],
+  teams: [{
+    name: "Kevin's Team",
+    stats: [{
+      qb: {
+        name: "Alex Smith",
+        eid: 2018010600,
+        stats: {},
+        points: 0,
+      },
+      rb: {
+        name: 'Dion Lewis',
+        eid: 0,
+        stats: {},
+        points: 0,
+      },
+      wr: {
+        name: 'Brandin Cooks',
+        eid: 0,
+        stats: {},
+        points: 0,
+      },
+      points: 0
+    },
     {
-    teams: [
-      {
-          name: "Kevin's Team",
-          qb: {
-            name: "Tom Brady",
-            stats: {}, 
-            points: 0,
-          },
-          rb: {
-            name: 'Dion Lewis',
-            stats: {},
-            points: 0,
-          },
-          wr: {
-            name: 'Brandin Cooks',
-            stats: {},
-            points: 0,
-          },
-          points: 0
+      qb: {
+        name: "",
+        eid: 0,
+        stats: {},
+        points: 0,
       },
-      {
-        name: "Glen's Team",
+      rb: {
+        name: '',
+        eid: 0,
+        stats: {},
+        points: 0,
+      },
+      wr: {
+        name: '',
+        eid: 0,
+        stats: {},
+        points: 0,
+      },
+      points: 0
+    },
+    {
+      qb: {
+        name: '',
+        eid: 0,
+        stats: {},
+        points: 0,
+      },
+      rb: {
+        name: '',
+        eid: 0,
+        stats: {},
+        points: 0,
+      },
+      wr: {
+        name: '',
+        eid: 0,
+        stats: {},
+        points: 0,
+      },
+      points: 0
+    },
+    {
+      qb: {
+        name: '',
+        eid: 0,
+        stats: {},
+        points: 0,
+      },
+      rb: {
+        name: '',
+        eid: 0,
+        stats: {},
+        points: 0,
+      },
+      wr: {
+        name: '',
+        eid: 0,
+        stats: {},
+        points: 0,
+      },
+      points: 0
+    }]
+  },
+  {
+    name: "Glen's Team",
+    stats: [{
+      qb: {
+        name: "Cam Newton",
+        eid: 0,
+        stats: {},
+        points: 0,
+      },
+      rb: {
+        name: 'Jamal Lewis',
+        eid: 0,
+        stats: {},
+        points: 0,
+      },
+      wr: {
+        name: 'Kelvin Benjamin',
+        eid: 0,
+        stats: {},
+        points: 0,
+      },
+      points: 0
+    },
+    {
+      qb: {
+        name: '',
+        eid: 0,
+        stats: {},
+        points: 0,
+      },
+      rb: {
+        name: '',
+        eid: 0,
+        stats: {},
+        points: 0,
+      },
+      wr: {
+        name: '',
+        eid: 0,
+        stats: {},
+        points: 0,
+      },
+    },
+    {
         qb: {
-          name: "Cam Newton",
-          stats: {}, 
+          name: '',
+          eid: 0,
+          stats: {},
           points: 0,
         },
         rb: {
-          name: 'Jamal Lewis',
+          name: '',
+          eid: 0,
           stats: {},
           points: 0,
         },
         wr: {
-          name: 'Kelvin Benjamin',
+          name: '',
+          eid: 0,
           stats: {},
           points: 0,
         },
-        points: 0
+    },
+    {
+      qb: {
+        name: '',
+        eid: 0,
+        stats: {},
+        points: 0,
       },
-      {
-        name: "Mikes Team",
-        qb: {
-          name: "Drew Brees",
-          stats: {}, 
-          points: 0,
-        },
-        rb: {
-          name: 'Alvin Kamara',
-          stats: {},
-          points: 0,
-        },
-        wr: {
-          name: 'A.J. Green',
-          stats: {},
-          points: 0,
-        },
-        points: 0
+      rb: {
+        name: '',
+        eid: 0,
+        stats: {},
+        points: 0,
+      },
+      wr: {
+        name: '',
+        eid: 0,
+        stats: {},
+        points: 0,
       }
+    }]
+  }]
+})
 
-      
-      
-      
-        ]
-        
-    }
-)
-
-export default teamList
+      export default teamList

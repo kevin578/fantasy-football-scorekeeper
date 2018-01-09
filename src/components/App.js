@@ -3,60 +3,54 @@ import './../App.css';
 import Table from './Table';
 import 'react-table/react-table.css';
 import teamList from './../teamList'; 
-import { calculateQBpoints, calculateRBpoints, calculateWRpoints } from './../scoreCalculators'
+import calculatePoints from './../scoreCalculators'
 
 
 class App extends Component {
   constructor() {
     super();
     this.state = teamList();
-    this.getStats();
+    this.getGames();
   }
 
-  getStats() {
-    this.state.teams.forEach((p) => {
-      fetch('http://api.fantasy.nfl.com/v1/players/stats?statType=weekStats')
+
+  getGames() {
+    const gameResults = this.state.games.map((e)=> {
+      return fetch(`http://www.nfl.com/liveupdate/game-center/${e}/${e}_gtd.json`)
         .then((response) => {
-          response.json().then((data) => {
-            this.distributeStats(data.players)
+          return response.json().then((data) => {
+            return data
           })
         })
+    })
+    Promise.all(gameResults).then((results) => {
+      this.setState(() => ({ games: results }))
+      this.iterateThroughTeams();
+    })
+  }
 
+  iterateThroughTeams() {
+    this.state.teams.forEach((t) => {
+      this.iterateThroughTeamWeeks(t)
     })
   }
   
-  distributeStats(apiStats) {
-    this.state.teams.forEach((player,index) => {
-      
-      const qbIndex = apiStats.findIndex((p) => {
-        return p.name === player.qb.name
-      })
-      const rbIndex = apiStats.findIndex((p) => {
-        return p.name === player.rb.name
-      })
-      const wrIndex = apiStats.findIndex((p) => {
-        return p.name === player.wr.name
-      })
-
-      var stateCopy = Object.assign({}, this.state);
-      stateCopy.teams = stateCopy.teams.slice();
-      stateCopy.teams[index] = Object.assign({}, stateCopy.teams[index]);
-      if (qbIndex !== -1) stateCopy.teams[index].qb.stats = apiStats[qbIndex].stats;
-      if (rbIndex !== -1) stateCopy.teams[index].rb.stats = apiStats[rbIndex].stats;
-      if (wrIndex !== -1) stateCopy.teams[index].wr.stats = apiStats[wrIndex].stats || {};
-      stateCopy.teams[index].qb.points = calculateQBpoints(stateCopy.teams[index] || 0);
-      stateCopy.teams[index].rb.points = calculateRBpoints(stateCopy.teams[index] || 0);
-      stateCopy.teams[index].wr.points = calculateWRpoints(stateCopy.teams[index] || 0);
-      stateCopy.teams[index].points = stateCopy.teams[index].qb.points + stateCopy.teams[index].rb.points + stateCopy.teams[index].wr.points
-      this.setState(stateCopy)
-    });
+  iterateThroughTeamWeeks(week){
+    week.stats.forEach((p) => { 
+      calculatePoints(p.qb.name, p.qb.eid, this.state.games); 
+      calculatePoints(p.rb.name, p.rb.eid, this.state.games);
+      calculatePoints(p.wr.name, p.wr.eid, this.state.games);
+  })
+  }
+  
+  distributeStats(data) {
+    console.log(data)
   }
   
   
   render() {
     return (
       <div className="App">
-        <Table teams={this.state.teams} />
       </div>
     );
   }
