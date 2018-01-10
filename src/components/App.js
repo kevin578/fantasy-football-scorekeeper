@@ -3,7 +3,7 @@ import './../App.css';
 import Table from './Table';
 import 'react-table/react-table.css';
 import teamList from './../teamList'; 
-import calculatePoints from './../scoreCalculators'
+import calculatePoints from './../calculatePoints'
 
 
 class App extends Component {
@@ -37,9 +37,13 @@ class App extends Component {
   
   iterateThroughTeamWeeks(week){
     week.stats.forEach((p) => { 
-      calculatePoints(p.qb.name, p.qb.eid, this.state.games); 
-      calculatePoints(p.rb.name, p.rb.eid, this.state.games);
-      calculatePoints(p.wr.name, p.wr.eid, this.state.games);
+      let points = 0;
+      points += calculatePoints(p.qb.name, p.qb.eid, this.state.games); 
+      points += calculatePoints(p.rb.name, p.rb.eid, this.state.games);
+      points += calculatePoints(p.wr.name, p.wr.eid, this.state.games);
+      if (points > 0 && !isNaN(points)) {
+        console.log(`${week.name}: ${points}`)
+      }  
   })
   }
   
