@@ -57,7 +57,13 @@ const getPoints = (game, player)=> {
            points += game.fumbles[key].tot * -45
         }
     }
-    return points
+    if (points > 0 && !isNaN(points)) {
+        return points;
+    } 
+    else {
+        return 0;
+    }
+
 }
 
 const getShortName = (name) => {

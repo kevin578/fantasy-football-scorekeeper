@@ -30,34 +30,44 @@ class App extends Component {
   }
 
   iterateThroughTeams() {
-    this.state.teams.forEach((t) => {
-      this.iterateThroughTeamWeeks(t)
+    this.state.teams.forEach((t,index) => {
+      this.iterateThroughTeamWeeks(t, index)
+      
     })
   }
   
-  iterateThroughTeamWeeks(week){
-    week.stats.forEach((p) => { 
-      let points = 0;
-      points += calculatePoints(p.qb.name, p.qb.eid, this.state.games); 
-      points += calculatePoints(p.rb.name, p.rb.eid, this.state.games);
-      points += calculatePoints(p.wr.name, p.wr.eid, this.state.games);
-      if (points > 0 && !isNaN(points)) {
-        console.log(`${week.name}: ${points}`)
-      }  
+  iterateThroughTeamWeeks(week, team){
+    week.stats.forEach((p, index) => { 
+      if (p.qb.name && p.rb.name && p.wr.name) {
+        let stateCopy = { ...this.state };
+        const qbPoints = calculatePoints(p.qb.name, p.qb.eid, this.state.games);
+        const rbPoints = calculatePoints(p.rb.name, p.rb.eid, this.state.games);
+        const wrPoints = calculatePoints(p.wr.name, p.wr.eid, this.state.games);
+  
+        stateCopy.teams[team].stats[index].qb.points = qbPoints;
+        stateCopy.teams[team].stats[index].rb.points = rbPoints;
+        stateCopy.teams[team].stats[index].wr.points = wrPoints;
+        stateCopy.teams[team].stats[index].points = qbPoints + rbPoints + wrPoints;
+        stateCopy.teams[team].points += stateCopy.teams[team].stats[index].points
+        console.log(stateCopy)
+        this.setState(stateCopy)
+      }
+
+
+
+ 
   })
   }
-  
-  distributeStats(data) {
-    console.log(data)
-  }
-  
+
   
   render() {
     return (
       <div className="App">
+        <Table team={this.state}/> 
       </div>
     );
   }
 }
 
 export default App;
+<Table team={this.state}/>  

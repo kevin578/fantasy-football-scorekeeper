@@ -5,6 +5,7 @@ const teamList = () => ({
   ],
   teams: [{
     name: "Kevin",
+    points: 0,
     stats: [{
       //Week 18
       qb: {
@@ -96,6 +97,7 @@ const teamList = () => ({
   },
   {
     name: "Glen",
+    points: 0,
     stats: [{
       //week 18
       qb: {
@@ -184,6 +186,7 @@ const teamList = () => ({
     },
     {
       name: "Nicole",
+      points: 0,
       //week 18
       stats: [{
         qb: {
@@ -272,6 +275,7 @@ const teamList = () => ({
     },
     {
     name: "Roger",
+    points: 0,  
       stats: [{
       //week 18
       qb: {
@@ -359,7 +363,8 @@ const teamList = () => ({
     }]
     },
     {
-    name: "Gary",
+      name: "Gary",
+    points: 0,  
       stats: [{
       //week 18
       qb: {
@@ -447,7 +452,8 @@ const teamList = () => ({
     }]
     },
     {
-    name: "Scott",
+      name: "Scott",
+    points: 0,  
       stats: [{
       //week 18
       qb: {
@@ -536,6 +542,7 @@ const teamList = () => ({
     },
     {
       name: "Mike",
+      points: 0,
       stats: [{
         //week 18
         qb: {
@@ -624,6 +631,7 @@ const teamList = () => ({
     },
     {
       name: "John",
+      points: 0,
       stats: [{
         //week 18
         qb: {
