@@ -1,16 +1,20 @@
 const calculatePoints = (player, eid, games) => {
     const index = games.findIndex((element, index, array) => {
+        
         return JSON.stringify(element).includes(eid)
     })
 
-    if (eid) {
+    if (eid && index != -1) {
         const shortName = getShortName(player);
         let awayObject = games[index][eid].away.stats
         let homeObject = games[index][eid].home.stats
         const homePoints = getPoints(homeObject, shortName);
         const awayPoints = getPoints(awayObject, shortName);
         return homePoints + awayPoints;
-    }    
+    } 
+    else {
+        return 0;
+    }
 
 }
 

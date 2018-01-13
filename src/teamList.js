@@ -1,7 +1,9 @@
 const teamList = () => ({
   games: [
     //Week 18 1) Chiefs vs Titans 2) Rams vs Falcons 3) Jaguars vs Bills 4) Saints vs Panthers
-    2018010600, 2018010601, 2018010700, 2018010701
+    2018010600, 2018010601, 2018010700, 2018010701,
+    //Week 19 1) Eagles vs Falcons 2) Patriots vs Titans 3) Steelers vs Jaguars 4) Saints vs Vikings
+    2018011300, 2018011301, 2018011400, 2018011401 
   ],
   teams: [{
     name: "Kevin",
@@ -28,23 +30,23 @@ const teamList = () => ({
       },
       points: 0
     },
-    //Week 19
+    //Week 19 Divisional
     {
       qb: {
-        name: "",
-        eid: 0,
+        name: "Tom Brady",
+        eid: 2018011301,
         stats: {},
         points: 0,
       },
       rb: {
-        name: '',
-        eid: 0,
+        name: "Le'Veon Bell",
+        eid: 2018011400,
         stats: {},
         points: 0,
       },
       wr: {
-        name: '',
-        eid: 0,
+        name: 'Brandin Cooks',
+        eid: 2018011301,
         stats: {},
         points: 0,
       },

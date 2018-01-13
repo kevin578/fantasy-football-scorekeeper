@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import './../App.css';
+import './../css/App.css';
 import Table from './Table';
 import 'react-table/react-table.css';
+import './../css/Table.css';
 import teamList from './../teamList'; 
 import calculatePoints from './../calculatePoints'
 
@@ -21,6 +22,9 @@ class App extends Component {
           return response.json().then((data) => {
             return data
           })
+            .catch(() => {
+            return {}
+          })
         })
     })
     Promise.all(gameResults).then((results) => {
@@ -31,8 +35,7 @@ class App extends Component {
 
   iterateThroughTeams() {
     this.state.teams.forEach((t,index) => {
-      this.iterateThroughTeamWeeks(t, index)
-      
+      this.iterateThroughTeamWeeks(t, index)    
     })
   }
   
@@ -49,13 +52,8 @@ class App extends Component {
         stateCopy.teams[team].stats[index].wr.points = wrPoints;
         stateCopy.teams[team].stats[index].points = qbPoints + rbPoints + wrPoints;
         stateCopy.teams[team].points += stateCopy.teams[team].stats[index].points
-        console.log(stateCopy)
         this.setState(stateCopy)
       }
-
-
-
- 
   })
   }
 
