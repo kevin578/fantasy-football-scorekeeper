@@ -29,7 +29,7 @@ const Table = (props) => {
                     <p>{row.original.stats[0].qb.name}: {row.original.stats[0].qb.points}</p>
                     <p>{row.original.stats[0].rb.name}: {row.original.stats[0].rb.points}</p>
                     <p>{row.original.stats[0].wr.name}: {row.original.stats[0].wr.points}</p>
-                    <p>Total: {row.original.stats[0].points}</p>
+                    <p>Week: {row.original.stats[0].points}</p>
                 </div>
             )
         },
@@ -47,14 +47,14 @@ const Table = (props) => {
                             <p>{row.original.stats[1].wr.name}: {row.original.stats[1].wr.points}</p>
                         </div>
                     }    
-                    <p>Total: {row.original.stats[1].qb.points + row.original.stats[1].rb.points + row.original.stats[1].wr.points}</p>
+                    <p>Week: {row.original.stats[1].qb.points + row.original.stats[1].rb.points + row.original.stats[1].wr.points}</p>
                         </div>
                 
                 
             )
         },
         {
-            Header: 'Total',
+            Header: 'Postseason',
             accessor: 'points',
             id: 'points',
             width: screenSize > 500 ? 250 : 100,

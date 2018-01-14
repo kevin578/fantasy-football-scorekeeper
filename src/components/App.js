@@ -22,7 +22,7 @@ class App extends Component {
           return response.json().then((data) => {
             return data
           })
-            .catch(() => {
+        .catch(() => {
             return {}
           })
         })

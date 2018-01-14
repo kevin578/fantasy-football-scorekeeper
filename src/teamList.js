@@ -125,20 +125,20 @@ const teamList = () => ({
     //week 19
     {
       qb: {
-        name: '',
-        eid: 0,
+        name: 'Marcus Mariota',
+        eid: 2018011301,
         stats: {},
         points: 0,
       },
       rb: {
-        name: '',
-        eid: 0,
+        name: "Le'Veon Bell",
+        eid: 2018011400,
         stats: {},
         points: 0,
       },
       wr: {
-        name: '',
-        eid: 0,
+        name: 'Julio Jones',
+        eid: 2018011300,
         stats: {},
         points: 0,
       },
@@ -214,20 +214,20 @@ const teamList = () => ({
       //week 19
       {
         qb: {
-          name: '',
-          eid: 0,
+          name: 'Case Keenum',
+          eid: 2018011401,
           stats: {},
           points: 0,
         },
         rb: {
-          name: '',
-          eid: 0,
+          name: "Le'Veon Bell",
+          eid: 2018011400,
           stats: {},
           points: 0,
         },
         wr: {
-          name: '',
-          eid: 0,
+          name: 'Rob Gronkowski',
+          eid: 2018011301,
           stats: {},
           points: 0,
         },
@@ -303,20 +303,20 @@ const teamList = () => ({
     //week 19  
     {
       qb: {
-        name: '',
-        eid: 0,
+        name: 'Case Keenum',
+        eid: 2018011401,
         stats: {},
         points: 0,
       },
       rb: {
-        name: '',
-        eid: 0,
+        name: 'Dion Lewis',
+        eid: 2018011301,
         stats: {},
         points: 0,
       },
       wr: {
-        name: '',
-        eid: 0,
+        name: 'Julio Jones',
+        eid: 2018011300,
         stats: {},
         points: 0,
       },
@@ -392,20 +392,20 @@ const teamList = () => ({
     //week 19  
     {
       qb: {
-        name: '',
-        eid: 0,
+        name: 'Drew Brees',
+        eid: 2018011401,
         stats: {},
         points: 0,
       },
       rb: {
-        name: '',
-        eid: 0,
+        name: "Le'Veon Bell",
+        eid: 2018011400,
         stats: {},
         points: 0,
       },
       wr: {
-        name: '',
-        eid: 0,
+        name: 'Julio Jones',
+        eid: 2018011300,
         stats: {},
         points: 0,
       },
@@ -481,20 +481,20 @@ const teamList = () => ({
     //week 19  
     {
       qb: {
-        name: '',
-        eid: 0,
+        name: 'Drew Brees',
+        eid: 2018011401,
         stats: {},
         points: 0,
       },
       rb: {
-        name: '',
-        eid: 0,
+        name: 'Derrick Henry',
+        eid: 2018011301,
         stats: {},
         points: 0,
       },
       wr: {
-        name: '',
-        eid: 0,
+        name: 'Stefon Diggs',
+        eid: 2018011401,
         stats: {},
         points: 0,
       },
@@ -570,20 +570,20 @@ const teamList = () => ({
       //week 19
       {
         qb: {
-          name: '',
-          eid: 0,
+          name: 'Tom Brady',
+          eid: 2018011301,
           stats: {},
           points: 0,
         },
         rb: {
-          name: '',
-          eid: 0,
+          name: 'Dion Lewis',
+          eid: 2018011301,
           stats: {},
           points: 0,
         },
         wr: {
-          name: '',
-          eid: 0,
+          name: 'Adam Thielen',
+          eid: 2018011401,
           stats: {},
           points: 0,
         },
@@ -659,20 +659,20 @@ const teamList = () => ({
       //week 19
       {
         qb: {
-          name: '',
-          eid: 0,
+          name: "Tom Brady",
+          eid: 2018011301,
           stats: {},
           points: 0,
         },
         rb: {
-          name: '',
-          eid: 0,
+          name: "Le'Veon Bell",
+          eid: 2018011400,
           stats: {},
           points: 0,
         },
         wr: {
-          name: '',
-          eid: 0,
+          name: 'Rob Gronkowski',
+          eid: 2018011301,
           stats: {},
           points: 0,
         },
