@@ -4,8 +4,18 @@ import Table from './Table';
 import 'react-table/react-table.css';
 import './../css/Table.css';
 import teamList from './../teamList'; 
-import calculatePoints from './../calculatePoints'
-
+import calculatePoints from './../calculatePoints';
+import { ChasingDots,
+  Circle,
+  CubeGrid,
+  DoubleBounce,
+  FadingCircle,
+  FoldingCube,
+  Pulse,
+  RotatingPlane,
+  ThreeBounce,
+  WanderingCubes,
+  Wave} from 'better-react-spinkit';
 
 class App extends Component {
   constructor() {
@@ -51,16 +61,24 @@ class App extends Component {
         stateCopy.teams[team].stats[index].wr.points = wrPoints;
         stateCopy.teams[team].stats[index].points = qbPoints + rbPoints + wrPoints;
         stateCopy.teams[team].points += stateCopy.teams[team].stats[index].points
+        stateCopy.isLoading = false;
         this.setState(stateCopy)
       }
   })
   }
-
+  checkIsLoading() {
+    if (this.state.isLoading == true) {
+      return <ThreeBounce class = 'loadingAnimation'/>
+    }
+    else {
+      return <Table team={this.state} />
+    }
+  }
   
   render() {
     return (
       <div className="App">
-        <Table team={this.state}/> 
+        { this.checkIsLoading() }
       </div>
     );
   }

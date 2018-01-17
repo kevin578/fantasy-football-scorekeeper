@@ -1,4 +1,5 @@
 const teamList = () => ({
+  isLoading: true,
   games: [
     //Week 18 1) Chiefs vs Titans 2) Rams vs Falcons 3) Jaguars vs Bills 4) Saints vs Panthers
     2018010600, 2018010601, 2018010700, 2018010701,
