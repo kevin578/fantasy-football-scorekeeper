@@ -14,7 +14,6 @@ class App extends Component {
     this.getGames();
   }
 
-
   getGames() {
     const gameResults = this.state.games.map((e)=> {
       return fetch(`http://www.nfl.com/liveupdate/game-center/${e}/${e}_gtd.json`)

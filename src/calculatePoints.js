@@ -58,7 +58,7 @@ const getPoints = (game, player)=> {
 
     for (key in game.fumbles) {
         if (game.fumbles[key].name === player) {
-           points += game.fumbles[key].tot * -45
+           points += game.fumbles[key].lost * -45
         }
     }
     if (points > 0 && !isNaN(points)) {
