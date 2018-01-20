@@ -5,17 +5,7 @@ import 'react-table/react-table.css';
 import './../css/Table.css';
 import teamList from './../teamList'; 
 import calculatePoints from './../calculatePoints';
-import { ChasingDots,
-  Circle,
-  CubeGrid,
-  DoubleBounce,
-  FadingCircle,
-  FoldingCube,
-  Pulse,
-  RotatingPlane,
-  ThreeBounce,
-  WanderingCubes,
-  Wave} from 'better-react-spinkit';
+import { ThreeBounce } from 'better-react-spinkit';
 
 class App extends Component {
   constructor() {
@@ -85,4 +75,3 @@ class App extends Component {
 }
 
 export default App;
-<Table team={this.state}/>  
