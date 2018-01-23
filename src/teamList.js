@@ -4,7 +4,9 @@ const teamList = () => ({
     //Week 18 1) Chiefs vs Titans 2) Rams vs Falcons 3) Jaguars vs Bills 4) Saints vs Panthers
     2018010600, 2018010601, 2018010700, 2018010701,
     //Week 19 1) Eagles vs Falcons 2) Patriots vs Titans 3) Steelers vs Jaguars 4) Saints vs Vikings
-    2018011300, 2018011301, 2018011400, 2018011401 
+    2018011300, 2018011301, 2018011400, 2018011401,
+    //week 20 1) Patriots vs Jaguars 2) Vikings vs Eagles
+    2018012100, 2018012101
   ],
   teams: [{
     name: "Kevin",
@@ -56,20 +58,20 @@ const teamList = () => ({
     //Week 20
     {
       qb: {
-        name: '',
-        eid: 0,
+        name: 'Blake Bortles',
+        eid: 2018012100,
         stats: {},
         points: 0,
       },
       rb: {
-        name: '',
-        eid: 0,
+        name: 'Leonard Fournette',
+        eid: 2018012100,
         stats: {},
         points: 0,
       },
       wr: {
-        name: '',
-        eid: 0,
+        name: 'Stefon Diggs',
+        eid: 2018012101,
         stats: {},
         points: 0,
       },
@@ -147,20 +149,20 @@ const teamList = () => ({
       //week 20
     {
         qb: {
-          name: '',
-          eid: 0,
+          name: 'Tom Brady',
+          eid: 2018012100,
           stats: {},
           points: 0,
         },
         rb: {
-          name: '',
-          eid: 0,
+          name: 'Dion Lewis',
+          eid: 2018012100,
           stats: {},
           points: 0,
         },
         wr: {
-          name: '',
-          eid: 0,
+          name: 'Rob Gronkowski',
+          eid: 2018012100,
           stats: {},
           points: 0,
         },
@@ -236,20 +238,20 @@ const teamList = () => ({
       //week 20
       {
           qb: {
-            name: '',
-            eid: 0,
+            name: 'Nick Foles',
+            eid: 2018012101,
             stats: {},
             points: 0,
           },
           rb: {
-            name: '',
-            eid: 0,
+            name: 'Dion Lewis',
+            eid: 2018012100,
             stats: {},
             points: 0,
           },
           wr: {
-            name: '',
-            eid: 0,
+            name: 'Stefon Diggs',
+            eid: 2018012101,
             stats: {},
             points: 0,
           },
@@ -325,20 +327,20 @@ const teamList = () => ({
     //week 20
     {
         qb: {
-          name: '',
-          eid: 0,
+          name: 'Nick Foles',
+          eid: 2018012101,
           stats: {},
           points: 0,
         },
         rb: {
-          name: '',
-          eid: 0,
+          name: 'Jay Ajayi',
+          eid: 2018012101,
           stats: {},
           points: 0,
         },
         wr: {
-          name: '',
-          eid: 0,
+          name: 'Rob Gronkowski',
+          eid: 2018012100,
           stats: {},
           points: 0,
         },
@@ -414,20 +416,20 @@ const teamList = () => ({
     //week 20
     {
         qb: {
-          name: '',
-          eid: 0,
+          name: 'Nick Foles',
+          eid: 2018012101,
           stats: {},
           points: 0,
         },
         rb: {
-          name: '',
-          eid: 0,
+          name: 'Dion Lewis',
+          eid: 2018012100,
           stats: {},
           points: 0,
         },
         wr: {
-          name: '',
-          eid: 0,
+          name: 'Stefon Diggs',
+          eid: 2018012101,
           stats: {},
           points: 0,
         },
@@ -503,20 +505,20 @@ const teamList = () => ({
     //week 20
     {
         qb: {
-          name: '',
-          eid: 0,
+          name: 'Blake Bortles',
+          eid: 2018012100,
           stats: {},
           points: 0,
         },
         rb: {
-          name: '',
-          eid: 0,
+          name: 'Latavius Murray',
+          eid: 2018012101,
           stats: {},
           points: 0,
         },
         wr: {
-          name: '',
-          eid: 0,
+          name: 'Alshon Jeffery',
+          eid: 2018012101,
           stats: {},
           points: 0,
         },
@@ -592,20 +594,20 @@ const teamList = () => ({
       //week 20
       {
           qb: {
-            name: '',
-            eid: 0,
+            name: 'Blake Bortles',
+            eid: 2018012100,
             stats: {},
             points: 0,
           },
           rb: {
-            name: '',
-            eid: 0,
+            name: 'Leonard Fournette',
+            eid: 2018012100,
             stats: {},
             points: 0,
           },
           wr: {
-            name: '',
-            eid: 0,
+            name: 'Rob Gronkowski',
+            eid: 2018012100,
             stats: {},
             points: 0,
           },
@@ -681,20 +683,20 @@ const teamList = () => ({
       //week 20
       {
           qb: {
-            name: '',
-            eid: 0,
+            name: 'Blake Bortles',
+            eid: 2018012100,
             stats: {},
             points: 0,
           },
           rb: {
-            name: '',
-            eid: 0,
+            name: 'Dion Lewis',
+            eid: 2018012100,
             stats: {},
             points: 0,
           },
           wr: {
-            name: '',
-            eid: 0,
+            name: 'Adam Thielen',
+            eid: 2018012101,
             stats: {},
             points: 0,
           },
